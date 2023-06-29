@@ -1,0 +1,68 @@
+`include "normalize_mult.sv"
+`include "round_mult.sv"
+
+module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i add for troubleshoot ->*/, overflow , underflow , round_exponent);
+
+	input logic [31:0] a, b;  // Floating-Point numbers
+	output logic [31:0] z;    // a ± b
+	output logic [7:0] status;  // Status Flags 
+	//my logic
+	//step 1
+	logic sign ;
+	//step 2 & 3
+	logic [9:0] exponent ; //result of exponent(a) + exponent(b) - bias(127)
+	//step 4
+	logic [47:0] mantissa_product;
+	//step 5
+	logic sticky ;
+	logic guard ;
+	logic [9:0] norm_exponent ;
+	logic [22:0] norm_mantissa ;
+	//step 6
+	logic [25:0] rounding_result ; // rounding_result[25] is 'inexact' bit = sticky NOR guard. rounding_result[24:23] possible overflow bits
+	output logic [9:0] round_exponent ;
+	logic [31:0] z_calc ;
+	//step 7
+	output logic overflow ;
+	output logic underflow ;
+	logic zero_f ;
+	logic inf_f ;
+	logic nan_f ;
+	logic tiny_f ;
+	logic huge_f ; 
+	logic inexact_f ;
+	//my logic end
+	//================//
+	normalize_mult my_normalize_mult(mantissa_product, exponent , sticky , guard , norm_exponent , norm_mantissa) ;
+	round_mult #(round) my_round_mult(norm_exponent , {1'b1,norm_mantissa} , guard , sticky , sign , rounding_result , round_exponent) ;
+	exception_mult #(round) my_exception_mult(a , b , z_calc , overflow , underflow , rounding_result[25] /*inexact*/ , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;	
+	assign status = {1'b1  , 1'b1 , inexact_f, huge_f , tiny_f , nan_f , inf_f , zero_f} ;
+	//================//
+	always_comb
+	begin
+		sign = a[31] ^ b[31] ; //step 1 calculate sign 
+		exponent = a[30:23] + b[30:23] - 127; //step 2 & 3 when sign is calculated , do exponent 
+		mantissa_product = {1'b1,a[22:0]} * {1'b1,b[22:0]}; //step 4 when exponent is calculated , do mantissa 
+		// step 5 when mantissa is calculated, call upon module normalize_mult 	
+		z_calc = {sign,round_exponent[7:0],rounding_result[22:0]} ; //early result made from rounded calculated sign , rounded exponment , rounded mantissa
+			if(norm_exponent[9] == 1'b1) //negative norm exponent -> underflow
+				if(signed'(norm_exponent[9:0]) < -126)
+					underflow = 1'b1 ;
+				else
+					underflow = 1'b0 ;
+			else 
+				underflow = 1'b0 ;
+
+			if (round_exponent[9] == 1'b0) //calculate overflow based on post rounding exponent , might be wrong , gotta check again, 8'hFE = 11111110 = 254
+				if(round_exponent[8:0] > 254)	
+					overflow = 1'b1 ;
+				else 
+					overflow = 1'b0 ;
+			else 
+				overflow = 1'b0 ;
+			
+		//step 7
+	end
+	
+	
+endmodule

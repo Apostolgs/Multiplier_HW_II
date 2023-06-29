@@ -1,0 +1,59 @@
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 12:07:16 on Jun 29,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#      26480   
+#      28400   
+#      51200   
+#      69760   
+#      77200   
+#      79400   
+#      96620   
+#      98600   
+#     139560   
+#     156720   
+#     158220   
+#     160320   
+#     173100   
+#     182460   
+#     184780   
+#     186920   
+#     191000   
+#     192940   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+quit -sim
+# End time: 12:09:09 on Jun 29,2023, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 2
