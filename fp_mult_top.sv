@@ -2,8 +2,8 @@
 
 //This module is given for the exercises
 typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
-module fp_mult_top #(parameter round_values round = away_zero)(
-     clk, rst, a, b, z, status, z_function_out /*new stuff i add for troubleshoot ->*/ , overflow , underflow , round_exponent
+module fp_mult_top #(parameter round_values round = IEEE_near)(
+     clk, rst, a, b, z, status, z_function_out /*new stuff i add for troubleshoot ->*/ , sticky , guard
 );
 
 	input logic [31:0] a, b;  // Floating-Point numbers
@@ -11,9 +11,9 @@ module fp_mult_top #(parameter round_values round = away_zero)(
    	output logic [7:0] status;  // Status Flags 
     	input logic clk, rst; 
     	output logic [31:0] z_function_out ;
-	output logic overflow ;
-	output logic underflow ;
-	output logic [9:0] round_exponent ;
+	output logic sticky ;
+	output logic guard ;
+
     
     	logic [31:0] a1, b1;  // Floating-Point numbers
     	logic [31:0] z1;    // a ± b
@@ -21,11 +21,9 @@ module fp_mult_top #(parameter round_values round = away_zero)(
     	logic [31:0] z_function ; //given function result
 	logic sticky1 ;
 	logic guard1 ;
-	logic underflow1 ;
-	logic overflow1 ;
-	logic [9:0] round_exponent1 ;
+
     
-    	fp_mult #(round) multiplier(a1,b1,z1,status1 , overflow1 , underflow1 , round_exponent1);
+    	fp_mult #(round) multiplier(a1,b1,z1,status1, sticky1 , guard1);
 
     	always @(posedge clk)
        		if (rst == 1)
@@ -36,9 +34,8 @@ module fp_mult_top #(parameter round_values round = away_zero)(
             		status <= '0;
 	     		z_function_out <= '0 ;
 			//
-			overflow <= 0;
-			underflow <= 0;
-			round_exponent <= '0 ;
+			sticky <= 0 ;
+			guard <= 0 ;
           	end
        		else
           	begin
@@ -48,9 +45,8 @@ module fp_mult_top #(parameter round_values round = away_zero)(
              		status <= status1;
 	     		z_function_out <= multiplication("IEEE_near" , a1 , b1) ;
 			//
-			overflow <= overflow1 ;
-			underflow <= underflow1 ;
-			round_exponent <= round_exponent1 ;
+			sticky <= sticky1 ;
+			guard <= guard1 ;
           	end
 
 endmodule

@@ -24,9 +24,9 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						2'b00: ;
 						2'b01: ;
 						2'b10: 
-							if (norm_mantissa[0] == 1'b1) //odd
+							if (norm_mantissa[0] == 1'b0) //even
 								;
-							else //even
+							else //odd
 								rounding_result = rounding_result + 1;
 							2'b11: rounding_result = rounding_result + 1 ;
 						default: ;

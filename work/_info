@@ -52,6 +52,22 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -78,8 +94,8 @@ n@_opt1
 Z12 OL;O;2021.2;73
 R1
 T_opt2
-!s110 1687890302
-V;YAN<a=<e^YQf8=dQJbVa1
+!s110 1688047861
+VfbI>I;0mf]:nQ1DkJRbJL1
 R3
 R6
 R2
@@ -87,34 +103,33 @@ R5
 R4
 R7
 R8
-=1-b42e9906e99e-649b297d-3c5-45ec
+=1-b42e9906e99e-649d90f5-42-2a6c
 R9
 R10
 R11
 n@_opt2
 R12
-R1
 vexception_mult
 Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-DXx4 work 22 exception_mult_sv_unit 0 22 ]87M09o]]f0VUaclcdQE:1
-Z14 !s110 1688029625
+DXx4 work 22 exception_mult_sv_unit 0 22 nd;gg8NzjaV1U@eI7XZc;3
+Z14 !s110 1688047848
 Z15 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 Tek^N]4PF^<;R>2ORl^gR3
-I58GTRQK9f7IgE3oNjSLLd1
+!s100 6=XAA8[0J2<b=L8NjM@>C2
+IFI260ooT_]B0O4KnjHGZJ0
 !s105 exception_mult_sv_unit
 S1
 Z16 dE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier
-Z17 w1687889682
+Z17 w1688041063
 Z18 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv
 Z19 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv
-!i122 1502
-L0 3 230
+!i122 1683
+L0 3 243
 Z20 OL;L;2021.2;73
 31
-Z21 !s108 1688029625.000000
+Z21 !s108 1688047848.000000
 Z22 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv|
 Z23 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv|
 !i113 0
@@ -123,19 +138,19 @@ R11
 Xexception_mult_sv_unit
 R13
 R14
-V]87M09o]]f0VUaclcdQE:1
+Vnd;gg8NzjaV1U@eI7XZc;3
 r1
 !s85 0
 !i10b 1
-!s100 NQcE=>V2Kfff4>OSQYD8A1
-I]87M09o]]f0VUaclcdQE:1
+!s100 h9O72>oEUS>WJn<DiUPl:2
+Ind;gg8NzjaV1U@eI7XZc;3
 !i103 1
 S1
 R16
 R17
 R18
 R19
-!i122 1502
+!i122 1683
 Z25 L0 1 0
 R20
 31
@@ -147,25 +162,25 @@ R24
 R11
 vfp_mult
 R13
-DXx4 work 15 fp_mult_sv_unit 0 22 a_FBNdSGG<8XU8MBn8Ej;0
-Z26 !s110 1688029626
+DXx4 work 15 fp_mult_sv_unit 0 22 NkAcoBG3?RCzTOII@:DQi1
+Z26 !s110 1688047849
 R15
 r1
 !s85 0
 !i10b 1
-!s100 =ejRgW4Ojf4JJiQg2Vaz81
-IGj`ShTTS9SN2;ikk908U32
+!s100 E[_Sg<<kP]FC^?9VW:eG51
+I?OA2FJT?XgRTU>d6kbh?60
 !s105 fp_mult_sv_unit
 S1
 R16
-Z27 w1687869659
-Z28 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
-Z29 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
-!i122 1503
-L0 4 65
+w1688044496
+Z27 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
+Z28 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
+!i122 1684
+L0 4 67
 R20
 31
-R21
+Z29 !s108 1688047849.000000
 Z30 !s107 round_mult.sv|normalize_mult.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
 Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
 !i113 0
@@ -174,25 +189,25 @@ R11
 Xfp_mult_sv_unit
 R13
 R26
-Va_FBNdSGG<8XU8MBn8Ej;0
+VNkAcoBG3?RCzTOII@:DQi1
 r1
 !s85 0
 !i10b 1
-!s100 =>b37AR73WzeKW2MUf`bR3
-Ia_FBNdSGG<8XU8MBn8Ej;0
+!s100 @IPmbHYZEfk2=U93UAg@J0
+INkAcoBG3?RCzTOII@:DQi1
 !i103 1
 S1
 R16
+Z32 w1688046945
 R27
 R28
-R29
 Fnormalize_mult.sv
 Fround_mult.sv
-!i122 1503
+!i122 1684
 R25
 R20
 31
-R21
+R29
 R30
 R31
 !i113 0
@@ -206,21 +221,21 @@ R15
 r1
 !s85 0
 !i10b 1
-!s100 B_e_<<[faVJ`Waei]S0TQ3
-IWA:];?N8IadlX<Ed1O`Hn3
+!s100 6Y<_:09@T1I8fL>4;dY3n3
+I]<<J^DMSlGX6Xnd>>BA]S2
 !s105 fp_mult_tb_sv_unit
 S1
 R16
-Z32 w1687890284
-Z33 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
-Z34 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
-!i122 1506
+Z33 w1688047846
+Z34 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
+Z35 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
+!i122 1687
 L0 4 40
 R20
 31
-Z35 !s108 1688029626.000000
-!s107 multiplication.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
-Z36 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
+R29
+Z36 !s107 multiplication.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
+Z37 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
 !i113 0
 R24
 R11
@@ -236,38 +251,38 @@ I39fBoS?9IO7R4HCc7gfLn2
 !i103 1
 S1
 R16
-R32
 R33
 R34
-Z37 Fmultiplication.sv
-!i122 1506
-Z38 L0 6 0
+R35
+Z38 Fmultiplication.sv
+!i122 1687
+Z39 L0 6 0
 R20
 31
-R35
-Z39 !s107 multiplication.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
+R29
 R36
+R37
 !i113 0
 R24
 R11
 vfp_mult_top
 R13
-DXx4 work 19 fp_mult_top_sv_unit 0 22 dgUj?JRBJ<WjG<ZPQ`2ZQ1
+DXx4 work 19 fp_mult_top_sv_unit 0 22 Yh^aWz1ldKE1b3Xh^jGMQ1
 R14
 R15
 r1
 !s85 0
 !i10b 1
-!s100 nOXFl0:kBPf]_kY?Kk`Vl1
-IMU[KJ4>6hoJUlDOXJo9TA1
+!s100 cIl44NmZ>^MZ@^a4Yhlg<1
+IK=k13b;:`k8>;X4jN@=mM0
 !s105 fp_mult_top_sv_unit
 S1
 R16
-Z40 w1687865924
+Z40 w1688044594
 Z41 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv
 Z42 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv
-!i122 1501
-L0 5 52
+!i122 1682
+L0 5 48
 R20
 31
 R21
@@ -279,21 +294,21 @@ R11
 Xfp_mult_top_sv_unit
 R13
 R14
-VdgUj?JRBJ<WjG<ZPQ`2ZQ1
+VYh^aWz1ldKE1b3Xh^jGMQ1
 r1
 !s85 0
 !i10b 1
-!s100 X2Nm@9^]d71]BAIemYkBC2
-IdgUj?JRBJ<WjG<ZPQ`2ZQ1
+!s100 V;gESVOH:1SLBiG0nU^:42
+IYh^aWz1ldKE1b3Xh^jGMQ1
 !i103 1
 S1
 R16
 R40
 R41
 R42
-R37
-!i122 1501
 R38
+!i122 1682
+R39
 R20
 31
 R21
@@ -311,8 +326,8 @@ I:ZeAG<KnZ<zb2a^IgO3:I3
 S1
 R16
 w1683303750
+R27
 R28
-R29
 !i122 16
 L0 1 13
 R15
@@ -342,8 +357,8 @@ R16
 w1682881017
 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv
 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv
-!i122 1500
-R38
+!i122 1681
+R39
 R20
 31
 R21
@@ -363,14 +378,14 @@ R16
 w1683457251
 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv
 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv
-!i122 1505
+!i122 1686
 L0 2 29
 R15
 R20
 r1
 !s85 0
 31
-R35
+R29
 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv|
 !i113 0
@@ -384,21 +399,21 @@ R15
 r1
 !s85 0
 !i10b 1
-!s100 90aX7WX]SS1jz1b]PodOP1
-IF04F6fHWmMWQRQ:2[2]jG0
+!s100 WDH_cJTQI3^3f1K:JdT8C1
+I=99gLV_m06CbgzM@2^i[I1
 !s105 round_mult_sv_unit
 S1
 R16
-Z45 w1687861068
-Z46 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
-Z47 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
-!i122 1504
+R32
+Z45 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
+Z46 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
+!i122 1685
 L0 3 108
 R20
 31
-R35
-Z48 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
-Z49 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
+R29
+Z47 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
+Z48 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
 !i113 0
 R24
 R11
@@ -414,16 +429,16 @@ IFPDbaz24If0UBMhOW4Oga3
 !i103 1
 S1
 R16
+R32
 R45
 R46
-R47
-!i122 1504
+!i122 1685
 R25
 R20
 31
-R35
+R29
+R47
 R48
-R49
 !i113 0
 R24
 R11

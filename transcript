@@ -8,8 +8,21 @@
 # 7 compiles, 0 failed with no errors.
 vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
 # vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
-# Start time: 12:07:16 on Jun 29,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Start time: 14:47:26 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
 # Loading sv_std.std
 # Loading work.round_mult_sv_unit(fast)
 # Loading work.round_mult(fast)
@@ -53,7 +66,713 @@ run -all
 #    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
 # Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
 # A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
+# Paste insertion failed: 26480: ** UI-Msg: (vish-4014) No objects found matching '26480'.
+# Causality operation skipped due to absence of debug database file
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv failed with 3 errors.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 15:02:23 on Jun 29,2023, Elapsed time: 0:14:57
+# Errors: 0, Warnings: 16
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:02:23 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 15:17:56 on Jun 29,2023, Elapsed time: 0:15:33
+# Errors: 0, Warnings: 14
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:17:56 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv failed with 1 errors.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv failed with 1 errors.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv failed with 1 errors.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 15:33:05 on Jun 29,2023, Elapsed time: 0:15:09
+# Errors: 0, Warnings: 18
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:33:05 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 2000020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 15:36:27 on Jun 29,2023, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 2
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:36:27 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 2000020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
 quit -sim
-# End time: 12:09:09 on Jun 29,2023, Elapsed time: 0:01:53
+# End time: 15:38:04 on Jun 29,2023, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 1
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:38:25 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+quit -sim
+# End time: 15:39:03 on Jun 29,2023, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 2
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:39:56 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(42)
+#    Time: 200040 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 42
+quit -sim
+# End time: 15:40:31 on Jun 29,2023, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 2
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:40:56 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(40)
+#    Time: 200010 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 40
+quit -sim
+# End time: 15:41:36 on Jun 29,2023, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 2
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:42:43 on Jun 29,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(40)
+#    Time: 200010 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 40
+quit -sim
+# End time: 15:43:10 on Jun 29,2023, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 2
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:43:23 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160310   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(40)
+#    Time: 200010 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 40
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 15:45:29 on Jun 29,2023, Elapsed time: 0:02:06
+# Errors: 0, Warnings: 3
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 15:45:29 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 200020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 16:03:42 on Jun 29,2023, Elapsed time: 0:18:13
+# Errors: 0, Warnings: 2
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 16:03:42 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__2)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.round_mult(fast__1)
+# Loading work.exception_mult(fast__1)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 400020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv failed with 1 errors.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 16:13:47 on Jun 29,2023, Elapsed time: 0:10:05
+# Errors: 0, Warnings: 5
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 16:13:47 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(39)
+#    Time: 400020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 39
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 16:17:29 on Jun 29,2023, Elapsed time: 0:03:42
+# Errors: 0, Warnings: 3
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 16:17:29 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+add wave sim:/fp_mult_tb/*
+run -all
+#     160320   
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 400020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# A time value could not be extracted from the current line
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 16:55:58 on Jun 29,2023, Elapsed time: 0:38:29
+# Errors: 0, Warnings: 2
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 16:55:58 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 400020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 17:02:07 on Jun 29,2023, Elapsed time: 0:06:09
+# Errors: 0, Warnings: 2
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 17:02:07 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 1000020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+# Compile of multiplication.sv was successful.
+# Compile of fp_mult_top.sv was successful.
+# Compile of exception_mult.sv was successful with warnings.
+# Compile of fp_mult.sv was successful.
+# Compile of round_mult.sv was successful.
+# Compile of normalize_mult.sv was successful.
+# Compile of fp_mult_tb.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs=+acc
+# End time: 17:11:00 on Jun 29,2023, Elapsed time: 0:08:53
+# Errors: 0, Warnings: 2
+# vsim -gui work.round_mult work.fp_mult_tb work.exception_mult work.normalize_mult work.fp_mult work.Main_module work.fp_mult_top -voptargs="+acc" 
+# Start time: 17:11:00 on Jun 29,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.round_mult_sv_unit(fast)
+# Loading work.round_mult(fast)
+# Loading work.fp_mult_tb_sv_unit(fast)
+# Loading work.fp_mult_tb(fast)
+# Loading work.fp_mult_top_sv_unit(fast)
+# Loading work.fp_mult_top(fast__1)
+# Loading work.fp_mult_sv_unit(fast)
+# Loading work.fp_mult(fast__1)
+# Loading work.normalize_mult(fast__1)
+# Loading work.exception_mult_sv_unit(fast)
+# Loading work.exception_mult(fast)
+# Loading work.normalize_mult(fast)
+# Loading work.fp_mult(fast)
+# Loading work.Main_module(fast)
+# Loading work.fp_mult_top(fast)
+add wave sim:/fp_mult_tb/*
+run -all
+# ** Note: $stop    : E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv(41)
+#    Time: 2000020 ns  Iteration: 0  Instance: /fp_mult_tb
+# Break in Module fp_mult_tb at E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv line 41
+quit -sim
+# End time: 17:57:24 on Jun 29,2023, Elapsed time: 0:46:24
 # Errors: 0, Warnings: 2

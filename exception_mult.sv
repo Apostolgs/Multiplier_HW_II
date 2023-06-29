@@ -29,9 +29,9 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 				return ZERO ;
 			else if (num_interp_in[30:23] == 8'hFF) // INF
 				return INF ;
-			else if (num_interp_in[30:23] == 8'hFF && num_interp_in[22:0] > 0) //NAN
+			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 1) //NAN
 				return INF ;
-			else if (num_interp_in[30:23] == 0 && num_interp_in[22:0] > 0) //Denorm
+			else if (num_interp_in[30:23] == 0 && |num_interp_in[22:0] == 1) //Denorm
 				return ZERO ;
 			else return NORM ;
 		end
@@ -220,8 +220,21 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 										end
 									else //we gucci
 										begin
-											z = z_calc ;
-											inexact_f = inexact ;
+											if (z_num_interp == ZERO)
+											begin
+												z = {z_calc[31] , z_num(ZERO)} ;
+												tiny_f = 1 ;
+											end
+											else if (z_num_interp == INF)
+											begin
+												z = {z_calc[31] , z_num(INF)} ;
+												huge_f = 1 ;
+											end
+											else
+											begin
+												z = z_calc ;
+												inexact_f = inexact ;
+											end
 										end
 								end
 						endcase

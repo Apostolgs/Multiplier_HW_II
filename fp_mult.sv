@@ -1,7 +1,7 @@
 `include "normalize_mult.sv"
 `include "round_mult.sv"
 
-module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i add for troubleshoot ->*/, overflow , underflow , round_exponent);
+module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i add for troubleshoot ->*/ , sticky , guard);
 
 	input logic [31:0] a, b;  // Floating-Point numbers
 	output logic [31:0] z;    // a ± b
@@ -14,17 +14,17 @@ module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i ad
 	//step 4
 	logic [47:0] mantissa_product;
 	//step 5
-	logic sticky ;
-	logic guard ;
+	output logic sticky ;
+	output logic guard ;
 	logic [9:0] norm_exponent ;
 	logic [22:0] norm_mantissa ;
 	//step 6
 	logic [25:0] rounding_result ; // rounding_result[25] is 'inexact' bit = sticky NOR guard. rounding_result[24:23] possible overflow bits
-	output logic [9:0] round_exponent ;
+	logic [9:0] round_exponent ;
 	logic [31:0] z_calc ;
 	//step 7
-	output logic overflow ;
-	output logic underflow ;
+	logic overflow ;
+	logic underflow ;
 	logic zero_f ;
 	logic inf_f ;
 	logic nan_f ;
@@ -36,7 +36,9 @@ module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i ad
 	normalize_mult my_normalize_mult(mantissa_product, exponent , sticky , guard , norm_exponent , norm_mantissa) ;
 	round_mult #(round) my_round_mult(norm_exponent , {1'b1,norm_mantissa} , guard , sticky , sign , rounding_result , round_exponent) ;
 	exception_mult #(round) my_exception_mult(a , b , z_calc , overflow , underflow , rounding_result[25] /*inexact*/ , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;	
-	assign status = {1'b1  , 1'b1 , inexact_f, huge_f , tiny_f , nan_f , inf_f , zero_f} ;
+	assign status = {1'b0  , 1'b0 , inexact_f, huge_f , tiny_f , nan_f , inf_f , zero_f} ;
+	
+	
 	//================//
 	always_comb
 	begin

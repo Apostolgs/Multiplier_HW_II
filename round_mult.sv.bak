@@ -49,7 +49,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 				IEEE_ninf : 
 				begin
 					if(sign) //negative
-						+rounding_result = rounding_result + 1 ;
+						rounding_result = rounding_result + 1 ;
 					else //positive
 						;
 				end
