@@ -47,7 +47,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 				MIN_NORM :
 					return {8'h01 , 23'b0} ; //min_norm has exponent = 1 , and significant = 0
 				MAX_NORM :
-					return {8'hFE , 23'b1} ; //max norm has exponent = FE and significant all bits = 1
+					return {8'hFE , 23'h7FFFFF} ; //max norm has exponent = FE and significant all bits = 1
 			endcase
 		end
 	endfunction
@@ -134,8 +134,8 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													end
 												IEEE_zero: //max_norm
 													begin
-														z = {z_calc[31],z_num(MAX_NORM)} ; 
-														huge_f = 1 ;
+															z = {z_calc[31],z_num(MAX_NORM)} ; 
+															huge_f = 1 ;		
 													end
 												IEEE_pinf: //+inf if sign (+) , -max_norm if sign(-)
 													if (z_calc[31]) 

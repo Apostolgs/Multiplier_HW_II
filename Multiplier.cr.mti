@@ -1,34 +1,4 @@
-{E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package fp_mult_top_sv_unit
--- Compiling module fp_mult_top
-
-Top level modules:
-	fp_mult_top
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package round_mult_sv_unit
--- Compiling module round_mult
-
-Top level modules:
-	round_mult
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package multiplication_sv_unit
-
-Top level modules:
-	--none--
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module normalize_mult
-
-Top level modules:
-	normalize_mult
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv}
+{C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module normalize_mult
 -- Compiling package fp_mult_sv_unit
@@ -38,7 +8,7 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	fp_mult
 
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv}
+} {} {}} {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling package fp_mult_tb_sv_unit
 -- Compiling module fp_mult_tb
@@ -46,14 +16,34 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	fp_mult_tb
 
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv} {2 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv}
+} {} {}} {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package exception_mult_sv_unit
--- Compiling module exception_mult
-** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(81): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-** Warning: E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv(96): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+-- Compiling package fp_mult_top_sv_unit
+-- Compiling module fp_mult_top
 
 Top level modules:
-	exception_mult
+	fp_mult_top
+
+} {} {}} {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package round_mult_sv_unit
+-- Compiling module round_mult
+
+Top level modules:
+	round_mult
+
+} {} {}} {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package multiplication_sv_unit
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module normalize_mult
+
+Top level modules:
+	normalize_mult
 
 } {} {}}

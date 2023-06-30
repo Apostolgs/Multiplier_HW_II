@@ -68,6 +68,19 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -76,31 +89,47 @@ R0
 !i10f 100
 cModel Technology
 Z1 dC:/intelFPGA/21.1/questa_fse/win64
-T_opt1
-!s110 1687790921
-Vo`]d9mLzILGg;D9^M]3nX3
-Z2 04 14 4 work exception_mult fast 0
-Z3 04 10 4 work round_mult fast 0
-Z4 04 7 4 work fp_mult fast 0
+T_opt
+!s110 1688127853
+V^1=lC<T:[83j1XPE66C>z1
+Z2 04 10 4 work round_mult fast 0
+Z3 04 10 4 work fp_mult_tb fast 0
+Z4 04 14 4 work exception_mult fast 0
 Z5 04 14 4 work normalize_mult fast 0
-Z6 04 10 4 work fp_mult_tb fast 0
+Z6 04 7 4 work fp_mult fast 0
 Z7 04 11 4 work Main_module fast 0
 Z8 04 11 4 work fp_mult_top fast 0
-=1-b42e9906e99e-6499a549-cb-7e0
+=1-7c70db00ba27-649ec96c-27c-3094
 Z9 !s124 OEM10U19 
 Z10 o-quiet -auto_acc_if_foreign -work work +acc
 Z11 tCvgOpt 0
-n@_opt1
+n@_opt
 Z12 OL;O;2021.2;73
 R1
+T_opt1
+!s110 1688133361
+VSXZoF6hEOB0]28z]PS==22
+R3
+R5
+R7
+R4
+R8
+R6
+R2
+=1-7c70db00ba27-649edef0-356-36d4
+R9
+R10
+R11
+n@_opt1
+R12
 T_opt2
 !s110 1688047861
 VfbI>I;0mf]:nQ1DkJRbJL1
-R3
-R6
 R2
-R5
+R3
 R4
+R5
+R6
 R7
 R8
 =1-b42e9906e99e-649d90f5-42-2a6c
@@ -109,48 +138,49 @@ R10
 R11
 n@_opt2
 R12
+R1
 vexception_mult
 Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-DXx4 work 22 exception_mult_sv_unit 0 22 nd;gg8NzjaV1U@eI7XZc;3
-Z14 !s110 1688047848
+DXx4 work 22 exception_mult_sv_unit 0 22 8Tm<6GJ8`NzT__VbZ_01b0
+Z14 !s110 1688133345
 Z15 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 6=XAA8[0J2<b=L8NjM@>C2
-IFI260ooT_]B0O4KnjHGZJ0
+!s100 792L4jAAg>oTO@n6oa0591
+IUeLL8SPOn05`YizSfBEY80
 !s105 exception_mult_sv_unit
 S1
-Z16 dE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier
-Z17 w1688041063
-Z18 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv
-Z19 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv
-!i122 1683
+Z16 dC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier
+Z17 w1688133340
+Z18 8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/exception_mult.sv
+Z19 FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/exception_mult.sv
+!i122 1813
 L0 3 243
 Z20 OL;L;2021.2;73
 31
-Z21 !s108 1688047848.000000
-Z22 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv|
-Z23 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv|
+Z21 !s108 1688133345.000000
+Z22 !s107 C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/exception_mult.sv|
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/exception_mult.sv|
 !i113 0
 Z24 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R11
 Xexception_mult_sv_unit
 R13
 R14
-Vnd;gg8NzjaV1U@eI7XZc;3
+V8Tm<6GJ8`NzT__VbZ_01b0
 r1
 !s85 0
 !i10b 1
 !s100 h9O72>oEUS>WJn<DiUPl:2
-Ind;gg8NzjaV1U@eI7XZc;3
+I8Tm<6GJ8`NzT__VbZ_01b0
 !i103 1
 S1
 R16
 R17
 R18
 R19
-!i122 1683
+!i122 1813
 Z25 L0 1 0
 R20
 31
@@ -162,52 +192,52 @@ R24
 R11
 vfp_mult
 R13
-DXx4 work 15 fp_mult_sv_unit 0 22 NkAcoBG3?RCzTOII@:DQi1
-Z26 !s110 1688047849
+Z26 DXx4 work 15 fp_mult_sv_unit 0 22 d_L1_;GhVk:8a<TeMl4MO2
+R14
 R15
 r1
 !s85 0
 !i10b 1
 !s100 E[_Sg<<kP]FC^?9VW:eG51
-I?OA2FJT?XgRTU>d6kbh?60
-!s105 fp_mult_sv_unit
+IPl0[^;]5EQ8N:2@GCIc:e2
+Z27 !s105 fp_mult_sv_unit
 S1
 R16
-w1688044496
-Z27 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
-Z28 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
-!i122 1684
+w1688128244
+Z28 8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv
+Z29 FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv
+!i122 1814
 L0 4 67
 R20
 31
-Z29 !s108 1688047849.000000
-Z30 !s107 round_mult.sv|normalize_mult.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
+R21
+Z30 !s107 round_mult.sv|normalize_mult.sv|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv|
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult.sv|
 !i113 0
 R24
 R11
 Xfp_mult_sv_unit
 R13
-R26
-VNkAcoBG3?RCzTOII@:DQi1
+R14
+Vd_L1_;GhVk:8a<TeMl4MO2
 r1
 !s85 0
 !i10b 1
-!s100 @IPmbHYZEfk2=U93UAg@J0
-INkAcoBG3?RCzTOII@:DQi1
+!s100 0hI?Nz?nL3]9WAjaZN`PW0
+Id_L1_;GhVk:8a<TeMl4MO2
 !i103 1
 S1
 R16
-Z32 w1688046945
-R27
+Z32 w1688130823
 R28
+R29
 Fnormalize_mult.sv
-Fround_mult.sv
-!i122 1684
+Z33 Fround_mult.sv
+!i122 1814
 R25
 R20
 31
-R29
+R21
 R30
 R31
 !i113 0
@@ -215,105 +245,105 @@ R24
 R11
 vfp_mult_tb
 R13
-DXx4 work 18 fp_mult_tb_sv_unit 0 22 39fBoS?9IO7R4HCc7gfLn2
-R26
+DXx4 work 18 fp_mult_tb_sv_unit 0 22 Rid`9bnOoU1IiZ_cDgBm:0
+R14
 R15
 r1
 !s85 0
 !i10b 1
-!s100 6Y<_:09@T1I8fL>4;dY3n3
-I]<<J^DMSlGX6Xnd>>BA]S2
+!s100 fXYV?d61?N:@jlFF@nW9e2
+Ij_KD;`lJAcHjP^G0]SRDg1
 !s105 fp_mult_tb_sv_unit
 S1
 R16
-Z33 w1688047846
-Z34 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
-Z35 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv
-!i122 1687
+Z34 w1688130659
+Z35 8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv
+Z36 FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv
+!i122 1815
 L0 4 40
 R20
 31
-R29
-Z36 !s107 multiplication.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv|
+R21
+Z37 !s107 multiplication.sv|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv|
+Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_tb.sv|
 !i113 0
 R24
 R11
 Xfp_mult_tb_sv_unit
 R13
-R26
-V39fBoS?9IO7R4HCc7gfLn2
+R14
+VRid`9bnOoU1IiZ_cDgBm:0
 r1
 !s85 0
 !i10b 1
 !s100 K@zD`2^NVQK?03<jYS8SW3
-I39fBoS?9IO7R4HCc7gfLn2
+IRid`9bnOoU1IiZ_cDgBm:0
 !i103 1
 S1
 R16
-R33
 R34
 R35
-Z38 Fmultiplication.sv
-!i122 1687
-Z39 L0 6 0
+R36
+Z39 Fmultiplication.sv
+!i122 1815
+Z40 L0 6 0
 R20
 31
-R29
-R36
+R21
 R37
+R38
 !i113 0
 R24
 R11
 vfp_mult_top
 R13
-DXx4 work 19 fp_mult_top_sv_unit 0 22 Yh^aWz1ldKE1b3Xh^jGMQ1
-R14
+DXx4 work 19 fp_mult_top_sv_unit 0 22 l:e5V;]n2SJK6@RSDMXW;3
+Z41 !s110 1688133346
 R15
 r1
 !s85 0
 !i10b 1
-!s100 cIl44NmZ>^MZ@^a4Yhlg<1
-IK=k13b;:`k8>;X4jN@=mM0
+!s100 diKB1Sc:BkeQ8`1U>>GHf0
+IGNJfWchd_aV3Fa4_XGj4F2
 !s105 fp_mult_top_sv_unit
 S1
 R16
-Z40 w1688044594
-Z41 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv
-Z42 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv
-!i122 1682
+Z42 w1688130588
+Z43 8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv
+Z44 FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv
+!i122 1816
 L0 5 48
 R20
 31
 R21
-Z43 !s107 multiplication.sv|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv|
-Z44 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv|
+Z45 !s107 multiplication.sv|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv|
+Z46 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/fp_mult_top.sv|
 !i113 0
 R24
 R11
 Xfp_mult_top_sv_unit
 R13
-R14
-VYh^aWz1ldKE1b3Xh^jGMQ1
+R41
+Vl:e5V;]n2SJK6@RSDMXW;3
 r1
 !s85 0
 !i10b 1
 !s100 V;gESVOH:1SLBiG0nU^:42
-IYh^aWz1ldKE1b3Xh^jGMQ1
+Il:e5V;]n2SJK6@RSDMXW;3
 !i103 1
 S1
 R16
-R40
-R41
 R42
-R38
-!i122 1682
+R43
+R44
 R39
+!i122 1816
+R40
 R20
 31
 R21
-R43
-R44
+R45
+R46
 !i113 0
 R24
 R11
@@ -324,10 +354,10 @@ R13
 !s100 @<czhQZKiclNfELZhGNAV0
 I:ZeAG<KnZ<zb2a^IgO3:I3
 S1
-R16
+dE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier
 w1683303750
-R27
-R28
+8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
+FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv
 !i122 16
 L0 1 13
 R15
@@ -337,108 +367,108 @@ r1
 31
 !s108 1683303752.000000
 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
-R31
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv|
 !i113 0
 R24
 R11
 n@main_module
 Xmultiplication_sv_unit
 R13
-R14
-V?@l7P]z]a9YDLI=[H6Xo>1
+R41
+VjN6FAU@;;D>9OQkc<k[oJ1
 r1
 !s85 0
 !i10b 1
 !s100 I=`[HA45aYi9?l?I:<2Y:0
-I?@l7P]z]a9YDLI=[H6Xo>1
+IjN6FAU@;;D>9OQkc<k[oJ1
 !i103 1
 S1
 R16
-w1682881017
-8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv
-FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv
-!i122 1681
-R39
+Z47 w1688037174
+8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv
+FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv
+!i122 1817
+R40
 R20
 31
-R21
-!s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv|
+Z48 !s108 1688133346.000000
+!s107 C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/multiplication.sv|
 !i113 0
 R24
 R11
 vnormalize_mult
 R13
-R26
+R41
 !i10b 1
 !s100 Qb[AjHLlecn3G[gA:03791
-I;YlWQiC`lFUAhO=QW[Q=T3
+IP<b53JAdfb2o7?AcYB00Q1
 S1
 R16
-w1683457251
-8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv
-FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv
-!i122 1686
+R47
+8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv
+FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv
+!i122 1818
 L0 2 29
 R15
 R20
 r1
 !s85 0
 31
-R29
-!s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv|
+R48
+!s107 C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/normalize_mult.sv|
 !i113 0
 R24
 R11
 vround_mult
 R13
-DXx4 work 18 round_mult_sv_unit 0 22 FPDbaz24If0UBMhOW4Oga3
 R26
+R14
 R15
 r1
 !s85 0
 !i10b 1
-!s100 WDH_cJTQI3^3f1K:JdT8C1
-I=99gLV_m06CbgzM@2^i[I1
-!s105 round_mult_sv_unit
+!s100 NlRzAPV<mdQ3E][hek6Q_0
+IeD9m^[NPL0RY]`Hbo@Y051
+R27
 S1
 R16
 R32
-Z45 8E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
-Z46 FE:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv
-!i122 1685
-L0 3 108
+8round_mult.sv
+R33
+!i122 1814
+L0 3 109
 R20
 31
-R29
-Z47 !s107 E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
-Z48 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv|
+R21
+R30
+R31
 !i113 0
 R24
 R11
 Xround_mult_sv_unit
 R13
-R26
-VFPDbaz24If0UBMhOW4Oga3
+R14
+VJ@ZHB5L:D9B2_9`aB_o=^1
 r1
 !s85 0
 !i10b 1
-!s100 ZhCDM3z9M4[eK:PBdIT9;2
-IFPDbaz24If0UBMhOW4Oga3
+!s100 <`]V<Mgb=lT0?UY?o@1gT1
+IJ@ZHB5L:D9B2_9`aB_o=^1
 !i103 1
 S1
 R16
 R32
-R45
-R46
-!i122 1685
+8C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv
+FC:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv
+!i122 1812
 R25
 R20
 31
-R29
-R47
-R48
+!s108 1688133344.000000
+!s107 C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Apostolis/Questa Projects/HW_II/Coursework/Multiplier/round_mult.sv|
 !i113 0
 R24
 R11

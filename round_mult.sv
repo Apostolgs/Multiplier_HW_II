@@ -32,12 +32,13 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						default: ;
 					endcase	
 				end
-				IEEE_zero : 
+				IEEE_zero : //during simulations i found many mismatches , when + , i was 1 above, when - i was 1 below, so i make CHANGE HERE
 				begin
 					if(sign) //negative
 						;
 					else //positive
-						rounding_result = rounding_result + 1;
+						//rounding_result = rounding_result + 1 ;
+						;
 				end
 				IEEE_pinf : 
 				begin
