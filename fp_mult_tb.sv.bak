@@ -10,7 +10,7 @@ module fp_mult_tb;
 	logic clk_tb ;
 	logic rst_n_tb ;
 	logic [31:0] z_function_tb ;
-	round_values round_tb = IEEE_zero ;
+	round_values round_tb = IEEE_pinf ;
 	logic sticky ;
 	logic guard ;
 	
@@ -18,7 +18,7 @@ module fp_mult_tb;
 	
 	always #10 clk_tb = ~clk_tb ;
 	
-	fp_mult_top #(IEEE_zero) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status(status_tb) ,
+	fp_mult_top #(IEEE_pinf) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status(status_tb) ,
   .z_function_out(z_function_tb) , .sticky(sticky) , .guard(guard)) ;
 	
 	initial

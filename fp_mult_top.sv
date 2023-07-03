@@ -43,7 +43,7 @@ module fp_mult_top #(parameter round_values round = IEEE_near)(
              		b1 <= b;
              		z <= z1;
              		status <= status1;
-	     		z_function_out <= multiplication("IEEE_zero" , a1 , b1) ;
+	     		z_function_out <= multiplication(round.name , a1 , b1) ;
 			//
 			sticky <= sticky1 ;
 			guard <= guard1 ;

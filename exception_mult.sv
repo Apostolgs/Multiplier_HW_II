@@ -222,8 +222,42 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 										begin
 											if (z_num_interp == ZERO)
 											begin
-												z = {z_calc[31] , z_num(ZERO)} ;
-												tiny_f = 1 ;
+												case(round) 
+												IEEE_near : 
+													begin
+														z = {z_calc[31],z_num(ZERO)} ;
+														zero_f = 1 ;
+													end
+												IEEE_zero : 
+													begin
+														z = {z_calc[31],z_num(ZERO)} ;
+														zero_f = 1 ;
+													end
+												IEEE_pinf : 
+													if (z_calc[31]) 
+													begin
+														z = {z_calc[31],z_num(ZERO)} ;
+														zero_f = 1 ;
+													end
+													else 
+													begin
+														z = {z_calc[31],z_num(MIN_NORM)} ;	
+														tiny_f = 1 ;
+													end
+												IEEE_ninf : 
+													if (~z_calc[31]) 
+													begin
+														z = {z_calc[31],z_num(ZERO)} ;
+														zero_f = 1 ;
+													end
+													else 
+													begin
+														z = {z_calc[31],z_num(MIN_NORM)} ;	
+														tiny_f = 1 ;
+													end
+												near_up : ;
+												away_zero : ;
+												endcase
 											end
 											else if (z_num_interp == INF)
 											begin
