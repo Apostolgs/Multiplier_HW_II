@@ -10,7 +10,7 @@ module fp_mult_tb;
 	logic clk_tb ;
 	logic rst_n_tb ;
 	logic [31:0] z_function_tb ;
-	round_values round_tb = IEEE_pinf ;
+	round_values round_tb = away_zerp ;
 	logic sticky ;
 	logic guard ;
 	
@@ -18,7 +18,7 @@ module fp_mult_tb;
 	
 	always #10 clk_tb = ~clk_tb ;
 	
-	fp_mult_top #(IEEE_pinf) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status(status_tb) ,
+	fp_mult_top #(away_zero) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status(status_tb) ,
   .z_function_out(z_function_tb) , .sticky(sticky) , .guard(guard)) ;
 	
 	initial
@@ -30,7 +30,7 @@ module fp_mult_tb;
 		#10
 		rst_n_tb = 0 ;
 		#10
-		for(int i = 0 ; i <100000 ; i++ )
+		for(int i = 0 ; i <50000 ; i++ )
 		begin
 			#20
 			a_tb = $urandom() ;

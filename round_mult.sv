@@ -40,7 +40,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						//rounding_result = rounding_result + 1 ;
 						;
 				end
-				IEEE_pinf : 
+				IEEE_pinf : //we have issues when we have min_norm but not underflow
 				begin
 					if(sign) //negative
 						;
@@ -73,12 +73,12 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 							default: ;
 						endcase
 				end
-				away_zero : 
+				away_zero : //CHANGED HERE 
 				begin
-					if(sign) //negative
+					//if(sign) //negative
 						rounding_result = rounding_result + 1 ;
-					else //positive
-						;
+					//else //positive
+						//;
 				end
 				default : //we set default case to do the same as IEEE_near
 

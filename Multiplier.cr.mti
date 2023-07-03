@@ -38,4 +38,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	fp_mult
 
+} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_tb.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package fp_mult_tb_sv_unit
+-- Compiling module fp_mult_tb
+
+Top level modules:
+	fp_mult_tb
+
 } {} {}}
