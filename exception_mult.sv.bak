@@ -27,7 +27,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 		begin 
 			if (num_interp_in[30:0] == 0) //Zero
 				return ZERO ;
-			else if (num_interp_in[30:23] == 8'hFF) // INF
+			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 0) // INF CHANGED HERE
 				return INF ;
 			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 1) //NAN
 				return INF ;
@@ -63,7 +63,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			nan_f = 0 ; 
 			tiny_f = 0 ;
 			huge_f = 0 ;
-			inexact_f = 0 ;
+			inexact_f = inexact ;
 			
 			
 			
@@ -131,6 +131,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(INF)} ;
 														inf_f = 1 ;
+														huge_f = 1 ;
 													end
 												IEEE_zero: //max_norm
 													begin
@@ -146,13 +147,15 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													else 
 													begin
 														z = {z_calc[31],z_num(INF)} ;	
-														inf_f = 1 ;	
+														inf_f = 1 ;
+														huge_f = 1 ;
 													end												
 												IEEE_ninf: //-inf if sign (-) , +max_norm if sign(+)
 													if (z_calc[31]) 
 													begin
 														z = {z_calc[31],z_num(INF)} ;
 														inf_f = 1 ;	
+														huge_f = 1 ;
 													end
 													else 
 													begin
@@ -163,11 +166,13 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(INF)} ;
 														inf_f = 1 ;
+														huge_f = 1 ;
 													end
 												away_zero: //inf
 													begin
 														z = {z_calc[31],z_num(INF)} ;
 														inf_f = 1 ;	
+														huge_f = 1 ;
 													end
 											endcase
 										end
@@ -177,18 +182,21 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 												IEEE_near: //zero
 													begin
 														z = {z_calc[31],z_num(ZERO)};
-														zero_f = 1;
+														zero_f = 1 ;
+														tiny_f = 1 ;
 													end
 												IEEE_zero: //zero
 													begin
 														z = {z_calc[31],z_num(ZERO)} ; 
 														zero_f = 1 ;
+														tiny_f = 1 ;
 													end
 												IEEE_pinf: //min_norm if + , zero if -
 													if (z_calc[31]) 
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														tiny_f = 1 ;
 													end
 													else 
 													begin
@@ -205,11 +213,13 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;	
 														zero_f = 1 ;
+														tiny_f = 1 ;
 													end
 												near_up: //min_norm
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														tiny_f = 1 ;
 													end
 												away_zero: //min_norm
 													begin
@@ -227,17 +237,29 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														if(|z_calc[22:0]) 
+															tiny_f = 1;
+														else
+															tiny_f = 0;
 													end
 												IEEE_zero : 
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														if(|z_calc[22:0]) 
+															tiny_f = 1;
+														else
+															tiny_f = 0;
 													end
 												IEEE_pinf : 
 													if (z_calc[31]) 
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														if(|z_calc[22:0]) 
+															tiny_f = 1;
+														else
+															tiny_f = 0;
 													end
 													else 
 													begin
@@ -249,6 +271,10 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														if(|z_calc[22:0]) 
+															tiny_f = 1;
+														else
+															tiny_f = 0;
 													end
 													else 
 													begin
@@ -259,14 +285,28 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													begin
 														z = {z_calc[31],z_num(ZERO)} ;
 														zero_f = 1 ;
+														if(|z_calc[22:0]) 
+															tiny_f = 1;
+														else
+															tiny_f = 0;
+														
 													end
-												away_zero : ;
+												away_zero : 
+													begin
+														z = {z_calc[31],z_num(MIN_NORM)} ;	
+														tiny_f = 1 ;
+													end
 												endcase
 											end
 											else if (z_num_interp == INF)
 											begin
 												z = {z_calc[31] , z_num(INF)} ;
 												huge_f = 1 ;
+												inf_f = 1 ;
+												if(z_calc[30:23] == 8'hFF && |z_calc[22:0] == 1)
+													nan_f = 1 ;
+												else 
+													nan_f = 0 ;
 											end
 											else
 											begin

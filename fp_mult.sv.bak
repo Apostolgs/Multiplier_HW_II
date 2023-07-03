@@ -1,7 +1,7 @@
 `include "normalize_mult.sv"
 `include "round_mult.sv"
 
-module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i add for troubleshoot ->*/ , sticky , guard);
+module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status);
 
 	input logic [31:0] a, b;  // Floating-Point numbers
 	output logic [31:0] z;    // a ± b
@@ -14,8 +14,8 @@ module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status /*new stuff i ad
 	//step 4
 	logic [47:0] mantissa_product;
 	//step 5
-	output logic sticky ;
-	output logic guard ;
+	logic sticky ;
+	logic guard ;
 	logic [9:0] norm_exponent ;
 	logic [22:0] norm_mantissa ;
 	//step 6

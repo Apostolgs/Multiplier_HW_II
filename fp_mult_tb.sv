@@ -11,8 +11,6 @@ module fp_mult_tb;
 	logic rst_n_tb ;
 	logic [31:0] z_function_tb ;
 	round_values round_tb = IEEE_near ;
-	logic sticky ;
-	logic guard ;
 	
 	typedef struct packed {
   	logic sign;
@@ -81,7 +79,7 @@ module fp_mult_tb;
 	always #10 clk_tb = ~clk_tb ;
 	
 	fp_mult_top #(IEEE_near	) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status(status_tb) ,
-  .z_function_out(z_function_tb) , .sticky(sticky) , .guard(guard)) ;
+  .z_function_out(z_function_tb)) ;
 	
 	initial
 	begin
@@ -92,7 +90,7 @@ module fp_mult_tb;
 		#10
 		rst_n_tb = 0 ;
 		#10
-		/*
+		
 		for(int i = 0 ; i <10000 ; i++ )
 		begin
 			#20
@@ -101,7 +99,7 @@ module fp_mult_tb;
 			if(z_function_tb != z_tb)
 				$display($time,,,);
 		end
-		*/
+		
 		for(int i = 0 ; i < 10 ; i++ )
 			for(int j = 0 ; j < 10 ; j++ )
 				begin
