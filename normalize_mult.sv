@@ -2,11 +2,11 @@
 module normalize_mult(mantissa_product, exponent , sticky , guard , norm_exponent , norm_mantissa) ;
 	
 	input logic [47:0] mantissa_product ;
-	input logic [9:0] exponent ;
+	input logic [9:0] exponent ; //10 bit after addition of exponent and substraction of bias
 	output logic sticky ;
 	output logic guard ;
-	output logic [9:0] norm_exponent ;
-	output logic [22:0] norm_mantissa ;
+	output logic [9:0] norm_exponent ; //norm exponent is either exponent of exponent + 1
+	output logic [22:0] norm_mantissa ; //norm mantissa is either mantissa_product[45:23] or mantissa_product[46:24]
 	
 	always_comb
 	begin

@@ -13,7 +13,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 	output logic nan_f = 0 ;
 	output logic tiny_f = 0 ;
 	output logic huge_f = 0 ;
-	output logic inexact_f = 0 ;
+	output logic inexact_f ;
 	// my declarations
 	typedef enum {ZERO , INF , NORM , MIN_NORM , MAX_NORM} interp_t ;
 	logic [30:0] placeholder_string = "placeholder_string" ;

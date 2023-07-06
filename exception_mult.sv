@@ -8,6 +8,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 	input logic underflow ;
 	input logic inexact ;
 	output logic [31:0] z ;
+	//status bits
 	output logic zero_f = 0 ;
 	output logic inf_f = 0 ;
 	output logic nan_f = 0 ;
@@ -27,7 +28,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 		begin 
 			if (num_interp_in[30:0] == 0) //Zero
 				return ZERO ;
-			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 0) // INF CHANGED HERE
+			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 0) // INF
 				return INF ;
 			else if (num_interp_in[30:23] == 8'hFF && |num_interp_in[22:0] == 1) //NAN
 				return INF ;
@@ -53,11 +54,12 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 	endfunction
 	
 	always_comb
-		begin
+		begin	
+			//interpet what numbers a , b , z are , then build cases based on interpetation
 			a_num_interp = num_interp(a) ;
 			b_num_interp = num_interp(b) ;
 			z_num_interp = num_interp(z_calc) ;
-			
+			//initialize status bits
 			zero_f = 0 ;
 			inf_f = 0 ;
 			nan_f = 0 ; 
@@ -66,7 +68,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			inexact_f = inexact ;
 			
 			
-			
+			//cases build based on Table V. page 15 of coursework description
 			case (a_num_interp) 
 				ZERO : 
 					begin
@@ -228,10 +230,10 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													end
 											endcase											
 										end
-									else //we gucci
+									else // NORM x NORM
 										begin
-											if (z_num_interp == ZERO)
-											begin
+											if (z_num_interp == ZERO) //based on interpetation of z , and rounding mode . if we interpet result as ZERO meaning its either zero or denorm
+											begin // we get the following based on round
 												case(round) 
 												IEEE_near : 
 													begin
@@ -298,7 +300,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 													end
 												endcase
 											end
-											else if (z_num_interp == INF)
+											else if (z_num_interp == INF) //if we interpet z = inf meaning its either inf or NAN we get the following
 											begin
 												z = {z_calc[31] , z_num(INF)} ;
 												huge_f = 1 ;
@@ -310,7 +312,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 											end
 											else
 											begin
-												z = z_calc ;
+												z = z_calc ; //if we dont interpet z as anything , it means its norm so we proceed with our result
 												inexact_f = inexact ;
 											end
 										end

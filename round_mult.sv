@@ -2,14 +2,14 @@ typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} ro
 
 module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , norm_mantissa , guard , sticky , sign , rounding_result , round_exponent) ;
 	input logic [9:0] norm_exponent ;
-	input logic [23:0] norm_mantissa ;
+	input logic [23:0] norm_mantissa ; //23 bits + leading 1
 	input logic guard ;
 	input logic sticky ;
 	input logic sign ;
-	output logic [25:0] rounding_result ;
+	output logic [25:0] rounding_result ; // 26 bits, with MSB = inexact , and 25 bits for overflow 
 	output logic [9:0] round_exponent ;
 	//my declarations
-	logic [24:0] temp_rounding_result = {1'b0,norm_mantissa} ;  //25 bits = 1 bits for possible overflow and 24 from 1.norm_mantissa
+	
 	
 	always_comb
 	begin
@@ -32,15 +32,11 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						default: ;
 					endcase	
 				end
-				IEEE_zero : //during simulations i found many mismatches , when + , i was 1 above, when - i was 1 below, so i make CHANGE HERE
+				IEEE_zero : 
 				begin
-					if(sign) //negative
-						;
-					else //positive
-						//rounding_result = rounding_result + 1 ;
-						;
+					;
 				end
-				IEEE_pinf : //we have issues when we have min_norm but not underflow
+				IEEE_pinf : 
 				begin
 					if(sign) //negative
 						;
@@ -75,10 +71,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 				end
 				away_zero : //CHANGED HERE 
 				begin
-					//if(sign) //negative
-						rounding_result = rounding_result + 1 ;
-					//else //positive
-						//;
+					rounding_result = rounding_result + 1 ;
 				end
 				default : //we set default case to do the same as IEEE_near
 
@@ -94,7 +87,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						default: ;
 					endcase
 				endcase
-			if (rounding_result[24] == 1) //round normalized exponent based on rounded mantissa
+			if (rounding_result[24] == 1) //round normalized exponent based on rounded mantissa 
 				begin
 					rounding_result = rounding_result >> 1 ;
 					round_exponent = norm_exponent + 1 ;
@@ -104,7 +97,6 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 			end
 		else
 			begin
-				//rounding_result = {rounding_result[25] , temp_rounding_result} ; 
 				round_exponent = norm_exponent ;
 			end
 	end
