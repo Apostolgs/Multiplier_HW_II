@@ -1,25 +1,24 @@
 `include "multiplication.sv"
 typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
 
-module fp_mult_tb;
+module fp_mult_tb #(parameter round_values round = IEEE_near);
 	timeunit 1ns ;
 	timeprecision 1ps ;
+	logic clk_tb ;
+	logic rst_n_tb ;
 	logic [31:0] a_tb , b_tb ;
 	logic [31:0] z_tb ;
 	//status_tb  = {1'b0  , 1'b0 , inexact , huge , tiny , nan , inf , zero};
-	logic clk_tb ;
-	logic rst_n_tb ;
 	logic [31:0] z_function_tb ;
-	round_values round_tb = near_up ;
 	// for visibility during testing 
-	logic zero ;
-	logic inf ;
-	logic nan ;
-	logic tiny ;
-	logic huge ;
-	logic inexact ;
-	logic unused ; // 0
 	logic div_by_0 ; // 0
+	logic unused ; // 0
+	logic inexact ;
+	logic huge ;
+	logic tiny ;
+	logic nan ;
+	logic inf ;
+	logic zero ;
 	//
 	
 	
@@ -90,7 +89,7 @@ module fp_mult_tb;
 	
 	always #10 clk_tb = ~clk_tb ; // 20ns period clk
 	
-	fp_mult_top #(near_up) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status({div_by_0  , unused , inexact , huge , tiny , nan , inf , zero}) ,
+	fp_mult_top #(round) fp_mult_top_tb (.clk(clk_tb) , .rst(rst_n_tb) , .a(a_tb) , .b(b_tb) , .z(z_tb) , .status({div_by_0  , unused , inexact , huge , tiny , nan , inf , zero}) , //we make [7:0] status with concatination for visibility purposes during testing 
   .z_function_out(z_function_tb)) ;
 
 	bind fp_mult_top_tb test_status_bits test_status_instance(.status(status) , .clk(clk) , .rst_n(rst)) ; 
@@ -106,7 +105,7 @@ module fp_mult_tb;
 		rst_n_tb = 0 ;
 		#10
 		
-		for(int i = 0 ; i <10000 ; i++ ) //many many iterations check
+		for(int i = 0 ; i <100000 ; i++ ) //many many iterations check
 		begin
 			#20
 			a_tb = $urandom() ;

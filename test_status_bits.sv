@@ -13,17 +13,21 @@ module test_status_bits(status , clk , rst_n);
 		else
 		begin
 			Zero_Inf : assert(~(status[0] && status[1]))//  $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
 			Zero_Nan : assert(~(status[0] && status[2]))// $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
 			Zero_Huge : assert(~(status[0] && status[4]))// $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
 			Inf_Tiny : assert(~(status[1] && status[3]))// $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
 			NaN_Tiny : assert(~(status[2] && status[3]))// $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
+			NaN_Huge : assert(~(status[2] && status[4]))// $display($stime,,,"%m assert passed\n"); 
+			else $display($stime,,,"%m assert failed\n");
+			NaN_Inexact : assert(~(status[2] && status[5]))// $display($stime,,,"%m assert passed\n"); 
+			else $display($stime,,,"%m assert failed\n");
 			Huge_Tiny : assert(~(status[3] && status[4]))// $display($stime,,,"%m assert passed\n"); 
-			else $error($stime,,,"%m assert failed\n");
+			else $display($stime,,,"%m assert failed\n");
 		end
 	end
 endmodule

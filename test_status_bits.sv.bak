@@ -12,7 +12,7 @@ module test_status_bits(status , clk , rst_n);
 			;
 		else
 		begin
-			Zero_Inf : assert(~(status[0] && status[1]))  $display($stime,,,"%m assert passed\n"); 
+			Zero_Inf : assert(~(status[0] && status[1]))//  $display($stime,,,"%m assert passed\n"); 
 			else $error($stime,,,"%m assert failed\n");
 			Zero_Nan : assert(~(status[0] && status[2]))// $display($stime,,,"%m assert passed\n"); 
 			else $error($stime,,,"%m assert failed\n");

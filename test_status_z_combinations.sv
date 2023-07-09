@@ -19,16 +19,16 @@ module test_status_z_combinations(pclk , prst_n , pa , pb , pz , pstatus);
 		pz[30:23] == 8'hFF ; 	
 	endsequence
 
-	sequence nan(logic [31:0] X_0s , logic [31:0] Y_1s) ; //If the ?nan? status bit asserts to 1 then 2 cycles before all the bits of the exponent of ?a? must be equal to 0 and the bits of the exponent of ?b? must be equal to 1 or the opposite.
-		(X_0s[30:23] == 0) && (Y_1s[30:23] == 1) ;
+	sequence nan(logic [31:0] X_0s , logic [31:0] Y_1s) ; //If the ?nan? status bit asserts to 1 then 2 cycles before all the bits of the exponent of ?a?
+		(X_0s[30:23] == 8'h00) && (Y_1s[30:23] == 8'hFF) ;    // must be equal to 0 and the bits of the exponent of ?b? must be equal to 1 or the opposite.
 	endsequence
 
-	sequence huge ; //If the ?huge? status bit asserts to 1 then at the same cycle all the bits of the exponent of ?z? must be equal to 1, or the maxNormal case is encountered.
-		inf or (pz[30:0] == {8'hFE , 23'h7FFFFF}) ; 	
+	sequence huge ; //If the ?huge? status bit asserts to 1 then at the same cycle all the bits of the exponent of ?z? must be equal to 1, 
+		inf or (pz[30:0] == {8'hFE , 23'h7FFFFF}) ; 	//or the maxNormal case is encountered.
 	endsequence
 
-	sequence tiny ; //If the ?tiny? status bit asserts to 1 then at the same cycle all the bits of the exponent of ?z? must be equal to 0, or the minNormal case is encountered.
-		zero or (pz[30:0] == {8'h01 , 23'b0}) ; 	
+	sequence tiny ; //If the ?tiny? status bit asserts to 1 then at the same cycle all the bits of the exponent of ?z? must be equal to 0, 
+		zero or (pz[30:0] == {8'h01 , 23'b0}) ; 	//or the minNormal case is encountered.
 	endsequence
 	
 	// status = {1'b0  , 1'b0 , inexact_f , huge_f , tiny_f , nan_f , inf_f , zero_f} ;
@@ -46,7 +46,7 @@ module test_status_z_combinations(pclk , prst_n , pa , pb , pz , pstatus);
 	endproperty
 
 	property check_nan ;
-		@(posedge pclk) disable iff (prst_n) pstatus[2] |-> nan($past(pa,2),$past(pb,2)) or nan($past(pb,2),$past(pa,2)) ; 
+		@(posedge pclk) disable iff (prst_n) pstatus[2] |-> nan($past(pa,1),$past(pb,1)) or nan($past(pb,1),$past(pa,1)) ; 
 	endproperty
 
 	property check_huge ;

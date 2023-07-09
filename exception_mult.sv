@@ -65,8 +65,9 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			nan_f = 0 ; 
 			tiny_f = 0 ;
 			huge_f = 0 ;
-			inexact_f = inexact ;
-			
+			inexact_f = ~inexact ;
+
+			//changed here
 			
 			//cases build based on Table V. page 15 of coursework description
 			case (a_num_interp) 
@@ -82,6 +83,8 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 								begin
 									z = {1'b0, z_num(INF)} ;
 									inf_f = 1 ;
+									nan_f = 1 ;
+									inexact_f = 0 ;
 								end
 							NORM : //+-zero
 								begin
@@ -97,6 +100,8 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 								begin
 									z = {1'b0, z_num(INF)} ;
 									inf_f = 1 ;
+									nan_f = 1 ;
+									inexact_f = 0 ;
 								end
 							INF : //+- inf
 								begin
@@ -305,10 +310,6 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 												z = {z_calc[31] , z_num(INF)} ;
 												huge_f = 1 ;
 												inf_f = 1 ;
-												if(z_calc[30:23] == 8'hFF && |z_calc[22:0] == 1)
-													nan_f = 1 ;
-												else 
-													nan_f = 0 ;
 											end
 											else
 											begin
