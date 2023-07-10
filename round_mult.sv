@@ -13,16 +13,16 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 	
 	always_comb
 	begin
-		rounding_result[25] = (guard && sticky) ; //rounding_result[25] is the inexact bit ive combined all outputs of rounding module into a 26 bit bus , exact = 0 , inexact = 1
+		rounding_result[25] = ~(guard | sticky) ; //rounding_result[25] is the inexact bit ive combined all outputs of rounding module into a 26 bit bus , exact = 1 , inexact = 0
 		rounding_result[24:0] = {1'b0,norm_mantissa} ;
-		if (rounding_result[25]) //inexact
+		if (~rounding_result[25]) //inexact
 			begin 
 				case(round)
 				IEEE_near : 
 				begin
 					case({guard,sticky})
-						2'b00: ;
-						2'b01: ;
+						//2'b00: ;
+						//2'b01: ;
 						2'b10: 
 							if (norm_mantissa[0] == 1'b0) //even
 								;
@@ -54,16 +54,16 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 				begin
 					if(sign) //negative
 						case({guard,sticky})
-							2'b00: ;
-							2'b01: ;
-							2'b10: ;
+							//2'b00: ;
+							//2'b01: ;
+							//2'b10: ;
 							2'b11: rounding_result = rounding_result + 1 ;
 							default: ;
 						endcase			
 					else //positive
 						case({guard,sticky})
-							2'b00: ;
-							2'b01: ;
+							//2'b00: ;
+							//2'b01: ;
 							2'b10: rounding_result = rounding_result + 1 ;
 							2'b11: rounding_result = rounding_result + 1 ;
 							default: ;
@@ -76,8 +76,8 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 				default : //we set default case to do the same as IEEE_near
 
 					case({guard,sticky})
-						2'b00: ;
-						2'b01: ;
+						//2'b00: ;
+						//2'b01: ;
 						2'b10: 
 							if (norm_mantissa[0] + 1) //odd
 								;

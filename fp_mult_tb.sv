@@ -1,7 +1,7 @@
 `include "multiplication.sv"
 typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
 
-module fp_mult_tb #(parameter round_values round = IEEE_near);
+module fp_mult_tb #(parameter round_values round = away_zero);
 	timeunit 1ns ;
 	timeprecision 1ps ;
 	logic rst_n_tb ;
@@ -105,7 +105,7 @@ module fp_mult_tb #(parameter round_values round = IEEE_near);
 		rst_n_tb = 0 ;
 		#10
 		
-		for(int i = 0 ; i <100000 ; i++ ) //many many iterations check
+		for(int i = 0 ; i <10000000 ; i++ ) //many many iterations check
 		begin
 			#20
 			a_tb = $urandom() ;

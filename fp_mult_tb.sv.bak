@@ -4,8 +4,8 @@ typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} ro
 module fp_mult_tb #(parameter round_values round = IEEE_near);
 	timeunit 1ns ;
 	timeprecision 1ps ;
-	logic clk_tb ;
 	logic rst_n_tb ;
+	logic clk_tb ;
 	logic [31:0] a_tb , b_tb ;
 	logic [31:0] z_tb ;
 	//status_tb  = {1'b0  , 1'b0 , inexact , huge , tiny , nan , inf , zero};
@@ -105,7 +105,7 @@ module fp_mult_tb #(parameter round_values round = IEEE_near);
 		rst_n_tb = 0 ;
 		#10
 		
-		for(int i = 0 ; i <100000 ; i++ ) //many many iterations check
+		for(int i = 0 ; i <10000000 ; i++ ) //many many iterations check
 		begin
 			#20
 			a_tb = $urandom() ;
