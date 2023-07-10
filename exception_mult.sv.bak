@@ -65,7 +65,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			nan_f = 0 ; 
 			tiny_f = 0 ;
 			huge_f = 0 ;
-			inexact_f = ~inexact ;
+			inexact_f = inexact ;
 
 			//changed here
 			
@@ -84,6 +84,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 									z = {1'b0, z_num(INF)} ;
 									inf_f = 1 ;
 									nan_f = 1 ;
+									inexact_f = 0 ;
 								end
 							NORM : //+-zero
 								begin
@@ -100,6 +101,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 									z = {1'b0, z_num(INF)} ;
 									inf_f = 1 ;
 									nan_f = 1 ;
+									inexact_f = 0 ;
 								end
 							INF : //+- inf
 								begin
@@ -308,6 +310,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 												z = {z_calc[31] , z_num(INF)} ;
 												huge_f = 1 ;
 												inf_f = 1 ;
+												$display($time,,,"this block") ;
 											end
 											else
 											begin

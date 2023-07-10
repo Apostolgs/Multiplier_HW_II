@@ -65,7 +65,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			nan_f = 0 ; 
 			tiny_f = 0 ;
 			huge_f = 0 ;
-			inexact_f = ~inexact ;
+			inexact_f = inexact ;
 
 			//changed here
 			

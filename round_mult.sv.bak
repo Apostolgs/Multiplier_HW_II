@@ -13,9 +13,9 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 	
 	always_comb
 	begin
-		rounding_result[25] = ~(guard | sticky) ; //rounding_result[25] is the inexact bit ive combined all outputs of rounding module into a 26 bit bus , exact = 1 , inexact = 0
+		rounding_result[25] = (guard | sticky) ; //rounding_result[25] is the inexact bit ive combined all outputs of rounding module into a 26 bit bus , exact = 0 , inexact = 1
 		rounding_result[24:0] = {1'b0,norm_mantissa} ;
-		if (!rounding_result[25]) //inexact
+		if (rounding_result[25]) //inexact
 			begin 
 				case(round)
 				IEEE_near : 
@@ -69,7 +69,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 							default: ;
 						endcase
 				end
-				away_zero : //CHANGED HERE 
+				away_zero : 
 				begin
 					rounding_result = rounding_result + 1 ;
 				end
@@ -87,7 +87,7 @@ module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , no
 						default: ;
 					endcase
 				endcase
-			if (rounding_result[24] == 1) //round normalized exponent based on rounded mantissa
+			if (rounding_result[24] == 1) //round normalized exponent based on rounded mantissa 
 				begin
 					rounding_result = rounding_result >> 1 ;
 					round_exponent = norm_exponent + 1 ;

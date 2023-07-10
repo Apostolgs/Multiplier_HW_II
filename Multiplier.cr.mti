@@ -1,17 +1,17 @@
-{E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_z_combinations.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_z_combinations.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module test_status_z_combinations
-
-Top level modules:
-	test_status_z_combinations
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv}
+{E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/round_mult.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling package round_mult_sv_unit
 -- Compiling module round_mult
 
 Top level modules:
 	round_mult
+
+} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_z_combinations.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_z_combinations.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module test_status_z_combinations
+
+Top level modules:
+	test_status_z_combinations
 
 } {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult_top.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -21,19 +21,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	fp_mult_top
 
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module normalize_mult
-
-Top level modules:
-	normalize_mult
-
 } {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/multiplication.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling package multiplication_sv_unit
 
 Top level modules:
 	--none--
+
+} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/normalize_mult.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module normalize_mult
+
+Top level modules:
+	normalize_mult
 
 } {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/fp_mult.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -44,6 +44,14 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	fp_mult
+
+} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv}
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling package exception_mult_sv_unit
+-- Compiling module exception_mult
+
+Top level modules:
+	exception_mult
 
 } {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_bits.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/test_status_bits.sv}
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -59,13 +67,5 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	fp_mult_tb
-
-} {} {}} {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv} {1 {vlog -work work -vopt -sv -stats=none {E:/Documents/Quartus Projects/Digital HW II/Coursework_Multiplier/exception_mult.sv}
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling package exception_mult_sv_unit
--- Compiling module exception_mult
-
-Top level modules:
-	exception_mult
 
 } {} {}}
