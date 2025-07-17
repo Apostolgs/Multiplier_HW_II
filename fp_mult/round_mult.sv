@@ -1,4 +1,4 @@
-typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
+//typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
 
 module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , norm_mantissa , guard , sticky , sign , rounding_result , round_exponent) ;
 	input logic [9:0] norm_exponent ;

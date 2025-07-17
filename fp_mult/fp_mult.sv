@@ -1,6 +1,3 @@
-`include "normalize_mult.sv"
-`include "round_mult.sv"
-
 module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status);
 
 	input logic [31:0] a, b;  // Floating-Point numbers

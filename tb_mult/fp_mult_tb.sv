@@ -1,5 +1,4 @@
-`include "multiplication.sv"
-typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
+//typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
 
 module fp_mult_tb #(parameter round_values round = away_zero);
 	timeunit 1ns ;
@@ -24,9 +23,9 @@ module fp_mult_tb #(parameter round_values round = away_zero);
 	
 	
 	typedef struct packed {
-  	logic sign;
- 	logic [30:23] exponent;
-  	logic [22:0] fraction;
+		logic sign;
+		logic [30:23] exponent;
+		logic [22:0] fraction;
 	} ieee_single_precision;
 
 	ieee_single_precision[9:0] myArray; //array for corner cases

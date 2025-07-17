@@ -1,4 +1,4 @@
-typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
+//typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
 
 module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_calc , overflow , underflow , inexact , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;
 	input logic [31:0] a ;

@@ -1,8 +1,4 @@
-`include "multiplication.sv"
-
 //This module is given for the exercises
-typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
-
 module fp_mult_top #(parameter round_values round = IEEE_near)(
      clk, rst, a, b, z, status, z_function_out
 );
