@@ -1,11 +1,12 @@
-//typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
+import round_enum_pkg::*;
 
-module round_mult #(parameter round_values round = IEEE_near)(norm_exponent , norm_mantissa , guard , sticky , sign , rounding_result , round_exponent) ;
+module round_mult (norm_exponent , norm_mantissa , round, guard , sticky , sign , rounding_result , round_exponent) ;
 	input logic [9:0] norm_exponent ;
 	input logic [23:0] norm_mantissa ; //23 bits + leading 1
 	input logic guard ;
 	input logic sticky ;
 	input logic sign ;
+	input round_values round;
 	output logic [25:0] rounding_result ; // 26 bits, with MSB = inexact , and 25 bits for overflow 
 	output logic [9:0] round_exponent ;
 	//my declarations

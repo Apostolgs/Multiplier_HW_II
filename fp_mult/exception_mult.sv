@@ -1,20 +1,21 @@
-//typedef enum {IEEE_near, IEEE_zero, IEEE_pinf, IEEE_ninf, near_up, away_zero} round_values;
+import round_enum_pkg::*;
 
-module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_calc , overflow , underflow , inexact , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;
+module exception_mult (a , b , z_calc , round, overflow , underflow , inexact , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;
 	input logic [31:0] a ;
 	input logic [31:0] b ;
 	input logic [31:0] z_calc ;
 	input logic overflow ;
 	input logic underflow ;
 	input logic inexact ;
+	input round_values round;
 	output logic [31:0] z ;
 	//status bits
-	output logic zero_f = 0 ;
-	output logic inf_f = 0 ;
-	output logic nan_f = 0 ;
-	output logic tiny_f = 0 ;
-	output logic huge_f = 0 ;
-	output logic inexact_f ;
+	output logic zero_f;
+	output logic inf_f;
+	output logic nan_f;
+	output logic tiny_f;
+	output logic huge_f;
+	output logic inexact_f;
 	// my declarations
 	typedef enum {ZERO , INF , NORM , MIN_NORM , MAX_NORM} interp_t ;
 	logic [30:0] placeholder_string = "placeholder_string" ;
@@ -66,7 +67,7 @@ module exception_mult #(parameter round_values round = IEEE_near) (a , b , z_cal
 			tiny_f = 0 ;
 			huge_f = 0 ;
 			inexact_f = inexact ;
-
+			
 			//changed here
 			
 			//cases build based on Table V. page 15 of coursework description

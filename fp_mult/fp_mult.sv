@@ -1,6 +1,8 @@
-module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status);
+import round_enum_pkg::*;
 
+module fp_mult (a ,b , round, z , status);
 	input logic [31:0] a, b;  // Floating-Point numbers
+	input round_values round;
 	output logic [31:0] z;    // a ± b
 	output logic [7:0] status;  // Status Flags 
 	//my logic
@@ -31,8 +33,8 @@ module fp_mult #(parameter round = IEEE_near) (a ,b ,z , status);
 	//my logic end
 	//================//
 	normalize_mult my_normalize_mult(mantissa_product, exponent , sticky , guard , norm_exponent , norm_mantissa) ;
-	round_mult #(round) my_round_mult(norm_exponent , {1'b1,norm_mantissa} , guard , sticky , sign , rounding_result , round_exponent) ;
-	exception_mult #(round) my_exception_mult(a , b , z_calc , overflow , underflow , rounding_result[25] /*inexact*/ , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;	
+	round_mult my_round_mult(norm_exponent , {1'b1,norm_mantissa} , round, guard , sticky , sign , rounding_result , round_exponent) ;
+	exception_mult my_exception_mult(a , b , z_calc , round, overflow , underflow , rounding_result[25] /*inexact*/ , z , zero_f, inf_f, nan_f, tiny_f, huge_f, inexact_f) ;	
 	assign status = {1'b0  , 1'b0 , inexact_f , huge_f , tiny_f , nan_f , inf_f , zero_f} ;
 	//================//
 	always_comb
