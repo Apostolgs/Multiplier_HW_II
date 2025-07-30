@@ -1,6 +1,11 @@
 /home/a/apostolgs/HW_II/Multiplier_HW_II/fp_mult/round_enum_pkg.sv
-/home/a/apostolgs/HW_II/Multiplier_HW_II/tb_mult/fp_mult_tb.sv
-/home/a/apostolgs/HW_II/Multiplier_HW_II/tb_mult/multiplication.sv
-/home/a/apostolgs/HW_II/Multiplier_HW_II/tb_mult/test_status_bits.sv
-/home/a/apostolgs/HW_II/Multiplier_HW_II/tb_mult/test_status_bits.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/tb_fp_mult_TOP.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/multiplication.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_if.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_transaction.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_driver.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_sequence.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_scoreboard.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_env.sv
+/home/a/apostolgs/HW_II/Multiplier_HW_II/Verification/fp_mult_test.sv
 +define+TSI_REPORT_DIR=\"logs/\"
