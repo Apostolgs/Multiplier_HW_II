@@ -19,12 +19,9 @@ module tb_fp_mult_TOP;
     );
 
     initial begin
-        uvm_config_db#(virtual fp_mult_if)::set(null, "*", "vif", vif);
-        run_test("fp_mult_test");
-    end
-
-    initial begin
-        $dumpfile("dump.vcd");
-        $dumpvars(0, tb_fp_mult);
+        begin
+            uvm_config_db#(virtual fp_mult_if)::set(null, "*", "vif", vif);
+            run_test("fp_mult_test");
+        end
     end
 endmodule

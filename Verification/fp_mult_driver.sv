@@ -20,6 +20,7 @@ class fp_mult_driver extends uvm_driver #(fp_mult_transaction);
             vif.a <= tr.a;
             vif.b <= tr.b;
             vif.round <= tr.round;
+            vif.rst <= tr.rst;
 
             @(posedge vif.clk);  // one cycle delay for DUT to register inputs
 
